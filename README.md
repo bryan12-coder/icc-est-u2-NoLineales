@@ -1,18 +1,72 @@
-## Getting Started
+# Práctica: Estructuras Dinámicas Lineales
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Datos del Estudiante
+- **Nombre:** Bryam Collaguazo
+- **Curso:** Grupo 3
+- **Fecha:** 10/06/2026
 
-## Folder Structure
+---
+**Descripción General de el Proyecto:**
+En este proyecto vamos a realizar dos ejercicios para generar un arbol y ver el orden dependiendo de como seria con el pre orden,In orden,Altura entre otros, uno seria con valores y otron con nombres y edades.
 
-The workspace contains two folders by default, where:
+## Ejercicio 01 : Arbol binario de busqueda
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+**Descripción:**
+En este ejercicio creamos un arbol binario donde guardamos numeros enteros.etse ejercicios hace que los valores se vayan los menores a la derecha y los mayores a la izquiera, en el cual gracias a eso podremos calcular su altura, su anchura, su pre orden entre otros 
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+
+## Ejercicio 02 :  Arbol binario generico
+
+**Descripción:**
+En este ejercicio llegamos a crear un arbol que es generico.Esto quiere decir que no solo nos va a permitir almacenar numeros, si no culaquier tipo de dato entre esos nombres y edades, En este caso las personas se ordenan por dos cosas por las edades y si tienen la misma edad despues van por los nombres
+
+
+### Captura de salidas en consola
+## Ejercicio 1 :
+![alt text](assents/image.png)
+## Ejercicio 2 :
+![alt text](<assents/image copy.png>)
+
+
+
+
+
+
+### Captura del código de implementación de los ejercicios 
+## Ejercicio 1 :
+![alt text](<assents/image copy 2.png>)
+
+## Ejercicio 2 :
+![alt text](image.png)
+
+
+
+
+
+### Tabla de evidencias requeridas
+
+
+| Ejercicio | Evidencias de código | Evidencias de consola | Observación |
+| :--- | :---: | :---: | :--- |
+| Ejercicio 01: Arbol binario de busqueda|![alt text](image-3.png)| ![alt text](image-4.png) |El codigo llega a funcionar correctamente de forma que podemos medir su altura,ancgura y ver su pre orden e inorden, este funciona ordenando a la derecha los mayores y a la izquiera los menores |
+| Ejercicio 02: Arbol binario generico | ![alt text](image-1.png) | ![alt text](image-2.png) | Se llego a implementar de forma correcta una logica que seria generica el cual nos permitio ordenar por asi decirlo a las personas por su nombre y su edad con un metodo implementado.|
+
+
+
+## Conclusiones
+
+El estudiante debe redactar al menos tres conclusiones propias relacionadas con el uso de pilas y colas.
+
+- Conclusión 1:
+En conclusion puedo decir que los Arboles binarios llegan a ser muy utilies ya que organizan la informacion que reciben de forma instantanea, lo cual nos permite meter datos y e arbol decide para que lado mandar, lo que llega a ser muy beneficiosos ya que nos permite encontrar datos o ordenar de forma rapida
+
+- Conclusión 2:
+En conclusion puedo decir que la recursividad es una herramienta  muy util ya que las operaciones como ver su anchura, altura, (pre orden, pos orden , inOrden) perimitiendo que su codigo sea mas facil y poder revisar sus sub arboles
+
+- Conclusión 3: 
+En concluision el tipo de datos genericos implemtentados que se llegana combinar con la interfaz, este nos permite crear un codigo que sea reutilizable. Gracias a esto una misma estructura de arbol nos permite guardar mas objetos.
+
