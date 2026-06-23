@@ -29,4 +29,11 @@ el metodo printTreeRecursivo valida que la raiz no sea nula, una vez que valida 
 ## Salida de consola 
 ![alt text](image-8.png)
 
+| Ejercicio | Evidencia de código | Evidencia de consola | Observación |
+|----------|---------------------|----------------------|-------------|
+| Ejercicio 01: Insertar en BST | ![alt text](image-5.png) |![alt text](<assents/image copy 4.png>)  |Es un ejercicio que relamente ayuda a desarrollar la logica para poder poner el arbol de forma vertical y imprimir la raiz y sus hijos y nodos |
+| Ejercicio 02: Invertir árbol binario | ![alt text](image-6.png)| ![alt text](image-8.png) | En este segundo codigo podemos ver que el arbol lo podemos invertier creando un auxiliar para guardar una varible y irle poniendo para que el que esta a la derecha se pase a la izquierda y viceversa y despues solo lo imprimimos.|
+| Ejercicio 03: Listar niveles | Código de ListLevels y método listLevels | Salida mostrando una lista por cada nivel | |
+| Ejercicio 04: Profundidad máxima | Código de Depth y método maxDepth | Salida mostrando la profundidad calculada | |
+
 

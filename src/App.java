@@ -5,6 +5,7 @@ import structures.nodes.Node;
 import structurestrees.BynaryTree;
 import structurestrees.Ejercicio1;
 import structurestrees.Ejercicio2;
+import structurestrees.Ejercicio3;
 import structurestrees.IntTree;
 
 public class App {
@@ -13,8 +14,16 @@ public class App {
         runPersonTree();
         runEjercicio1();
         runEjercicio2();
-    }
-    private static void runEjercicio2() {
+        runEjercicio3();
+                
+            }
+            private static void runEjercicio3() {
+                Ejercicio3 ejercicio3= new Ejercicio3();
+               int [] numeros= new int[]{4,7,2,9,6,3,1};
+               ejercicio3.insert(numeros);
+              
+            }
+            private static void runEjercicio2() {
         Ejercicio2 ejercicio2= new Ejercicio2();
         int [] numeros= new int[]{4,7,2,9,6,3,1};
             ejercicio2.insert(numeros);
