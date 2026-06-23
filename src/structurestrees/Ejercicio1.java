@@ -12,13 +12,6 @@ public class Ejercicio1 {
 
             
         }
-       
-        
-
-
-        //Crear un arbol BtS- Instanciar Binary Tree
-        //Insertar los numeros en el arbol
-        //Imprimir el arbol
     }
 
     private void printTree(Node<Integer> rool) {
@@ -35,10 +28,6 @@ public class Ejercicio1 {
             printTreeRecursivo(rool.getRight(), actual + 1);
             System.out.println("\t".repeat(actual) + rool.getValue());
             printTreeRecursivo(rool.getLeft(), actual + 1);
-        
-    
-
-
                 
     }
     

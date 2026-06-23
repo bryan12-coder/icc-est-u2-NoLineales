@@ -3,14 +3,25 @@ package structurestrees;
 import structures.nodes.Node;
 
 public class Ejercicio2 {
+    public void insert(int[] numeros){
+        BynaryTree<Integer> binario= new BynaryTree<>();
+        for (int numero : numeros) {
+            binario.insert(numero);
+        }
+
+        System.out.println("Árbol original:");
+        printTree(binario.getRool());
+
+        
+        Node<Integer> invertido = invert(binario.getRool());
+
+        System.out.println("\nÁrbol invertido:");
+        printTree(invertido);
+    }
 
             
     private Node<Integer> invert(Node<Integer> rool) {
-
-        
-       
-        invertRecursively(rool);
-        return rool;
+        return invertRecursively(rool);
                         
     }
         

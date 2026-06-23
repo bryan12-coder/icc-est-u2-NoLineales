@@ -16,13 +16,16 @@ public class App {
     }
     private static void runEjercicio2() {
         Ejercicio2 ejercicio2= new Ejercicio2();
-        
+        int [] numeros= new int[]{4,7,2,9,6,3,1};
+            ejercicio2.insert(numeros);
+            
                 
     }
     private static void runEjercicio1() {
             Ejercicio1 ejercicio1= new Ejercicio1();
             int [] numeros = new int[]{5,3,7,2,4,6,8};
             ejercicio1.insert(numeros);
+            
 
             
             }
