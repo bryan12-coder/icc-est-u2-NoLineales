@@ -3,14 +3,30 @@ import java.util.Random;
 import models.Person;
 import structures.nodes.Node;
 import structurestrees.BynaryTree;
+import structurestrees.Ejercicio1;
+import structurestrees.Ejercicio2;
 import structurestrees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
         runIntTree();
         runPersonTree();
+        runEjercicio1();
+        runEjercicio2();
     }
-    private static void runPersonTree() {
+    private static void runEjercicio2() {
+        Ejercicio2 ejercicio2= new Ejercicio2();
+        
+                
+    }
+    private static void runEjercicio1() {
+            Ejercicio1 ejercicio1= new Ejercicio1();
+            int [] numeros = new int[]{5,3,7,2,4,6,8};
+            ejercicio1.insert(numeros);
+
+            
+            }
+            private static void runPersonTree() {
         BynaryTree<Person> personTree= new BynaryTree<>();
         personTree.insert(new Person("Alice", 30));
         personTree.insert(new Person("Bob", 25));
@@ -120,11 +136,13 @@ public class App {
 
         System.out.println();
 
-        System.out.println("Tiempo getPeso(): "
-                + tiempoPesoVariableMs + " ms");
+        //System.out.println("Tiempo getPeso(): "
+               // + tiempoPesoVariableMs + " ms");
 
-        System.out.println("Tiempo pesoRecursivo(): "
-                + tiempoPesoRecursivoMs + " ms");
+        //System.out.println("Tiempo pesoRecursivo(): "
+                //+ tiempoPesoRecursivoMs + " ms");
+
 
     }
+    
 }
