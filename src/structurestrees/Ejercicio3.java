@@ -1,61 +1,30 @@
 package structurestrees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 import structures.nodes.Node;
 
 
 
 public class Ejercicio3 {
-    
-
     public void insert(int[] numeros) {
-        
-        BynaryTree<Integer> binario = new BynaryTree<>();
+        BynaryTree<Integer> tree = new BynaryTree<>();
         for (int numero : numeros) {
-            binario.insert(numero);
+            tree.insert(numero);
         }
 
-        
-        List<List<Node<Integer>>> niveles = listLevels(binario.getRool());
-        
-        
-        printFormat(niveles);
-    }
+        System.out.println("Imprimimos el arbol original");
+        printTree(tree.getRool(), 0);
 
-    
-    public List<List<Node<Integer>>> listLevels(Node<Integer> root) {
-        List<List<Node<Integer>>> result = new ArrayList<>();
-        helper(root, result, 0);
-        return result;
-    }
-
-    private void helper(Node<Integer> node, List<List<Node<Integer>>> result, int level) {
-        if (node == null) 
-            return;
-
+        System.out.println("\nOutput:");
+        List<List<Node<Integer>>> niveles = listLevels(tree.getRool());
         
-        if (level == result.size()) {
-            result.add(new ArrayList<>());
-        }
-
-        
-        result.get(level).add(node);
-
-        
-        helper(node.getLeft(), result, level + 1);
-        helper(node.getRight(), result, level + 1);
-    }
-
-    
-    private void printFormat(List<List<Node<Integer>>> niveles) {
-        System.out.println("Output:");
         for (List<Node<Integer>> nivel : niveles) {
             for (int i = 0; i < nivel.size(); i++) {
                 System.out.print(nivel.get(i).getValue());
-                
-                
                 if (i < nivel.size() - 1) {
                     System.out.print(" -> ");
                 }
@@ -63,5 +32,48 @@ public class Ejercicio3 {
             System.out.println();
         }
     }
+
+    public void printTree(Node<Integer> actual, int nivel) {
+        if (actual == null) {
+            return;
+        }
+       
+        printTree(actual.getRight(), nivel + 1);
+        System.out.println("\t".repeat(nivel) + actual.getValue());
+        printTree(actual.getLeft(), nivel + 1);
+    }
+
+    public List<List<Node<Integer>>> listLevels(Node<Integer> root) {
+        List<List<Node<Integer>>> result = new ArrayList<>();
+        
+        if (root == null) {
+            return result;
+        }
+        
+        Queue<Node<Integer>> cola = new LinkedList<>();
+        cola.add(root); 
+
+        while (!cola.isEmpty()) {
+            int nivel = cola.size(); 
+            
+            List<Node<Integer>> lista = new LinkedList<>(); 
+
+            for (int i = 0; i < nivel; i++) {
+                Node<Integer> actual = cola.poll(); 
+                lista.add(actual);        
+                
+                if (actual.getLeft() != null) {
+                    cola.add(actual.getLeft());
+                }
+                if (actual.getRight() != null) {
+                    cola.add(actual.getRight());
+                }
+            }
+            result.add(lista);
+        }
+
+        return result;
+    }
+
     
 }

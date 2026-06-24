@@ -6,6 +6,7 @@ import structurestrees.BynaryTree;
 import structurestrees.Ejercicio1;
 import structurestrees.Ejercicio2;
 import structurestrees.Ejercicio3;
+import structurestrees.Ejercicio4;
 import structurestrees.IntTree;
 
 public class App {
@@ -15,101 +16,100 @@ public class App {
         runEjercicio1();
         runEjercicio2();
         runEjercicio3();
-                
-            }
-            private static void runEjercicio3() {
-                Ejercicio3 ejercicio3= new Ejercicio3();
-               int [] numeros= new int[]{4,7,2,9,6,3,1};
-               ejercicio3.insert(numeros);
-              
-            }
-            private static void runEjercicio2() {
-        Ejercicio2 ejercicio2= new Ejercicio2();
-        int [] numeros= new int[]{4,7,2,9,6,3,1};
-            ejercicio2.insert(numeros);
-            
-                
-    }
-    private static void runEjercicio1() {
-            Ejercicio1 ejercicio1= new Ejercicio1();
-            int [] numeros = new int[]{5,3,7,2,4,6,8};
-            ejercicio1.insert(numeros);
-            
+        runEjercicio4();
 
-            
-            }
-            private static void runPersonTree() {
-        BynaryTree<Person> personTree= new BynaryTree<>();
+    }
+
+    private static void runEjercicio4() {
+
+        Ejercicio4 ejercicio4 = new Ejercicio4();
+        int[] numeros = new int[] { 4, 2, 7, 1, 3, 8 };
+        ejercicio4.insert(numeros);
+
+    }
+
+    private static void runEjercicio3() {
+        Ejercicio3 ejercicio3 = new Ejercicio3();
+        int[] numeros = new int[] { 4, 7, 2, 9, 6, 3, 1 };
+        ejercicio3.insert(numeros);
+
+    }
+
+    private static void runEjercicio2() {
+        Ejercicio2 ejercicio2 = new Ejercicio2();
+        int[] numeros = new int[] { 4, 7, 2, 9, 6, 3, 1 };
+        ejercicio2.insert(numeros);
+
+    }
+
+    private static void runEjercicio1() {
+        Ejercicio1 ejercicio1 = new Ejercicio1();
+        int[] numeros = new int[] { 5, 3, 7, 2, 4, 6, 8 };
+        ejercicio1.insert(numeros);
+
+    }
+
+    private static void runPersonTree() {
+        BynaryTree<Person> personTree = new BynaryTree<>();
         personTree.insert(new Person("Alice", 30));
         personTree.insert(new Person("Bob", 25));
         personTree.insert(new Person("Diego", 35));
         personTree.insert(new Person("Rafael", 35));
         personTree.insert(new Person("Ana", 35));
-        //Pregunta de prueba
+        // Pregunta de prueba
 
         personTree.inOrden();
         System.out.println();
         personTree.preOrder();
 
+    }
 
-        
-
-                
-                    
-                 
-        
-    }  
     private static void runIntTree() {
-                IntTree arbolNumeros= new IntTree();
+        IntTree arbolNumeros = new IntTree();
 
-                //arbolNumeros.setRool(10);
-                //System.out.println("Raiz" + arbolNumeros.getRool());
+        // arbolNumeros.setRool(10);
+        // System.out.println("Raiz" + arbolNumeros.getRool());
 
-                //Node<Integer> node2= new Node<>(20);
-               // Node<Integer> node3= new Node<>(30);
-                //Node<Integer> node4= new Node<>(40);
-               // Node<Integer> node5= new Node<>(50);
+        // Node<Integer> node2= new Node<>(20);
+        // Node<Integer> node3= new Node<>(30);
+        // Node<Integer> node4= new Node<>(40);
+        // Node<Integer> node5= new Node<>(50);
 
+        // Node<Integer> root = arbolNumeros.getRool();
 
-                //Node<Integer> root = arbolNumeros.getRool();
+        // root.setLeft(node2);
+        // root.setRight(node3);
 
-                //root.setLeft(node2);
-                //root.setRight(node3);
+        // node2.setLeft(node4);
+        // node4.setLeft(node5);
 
-               // node2.setLeft(node4);
-               // node4.setLeft(node5);
+        arbolNumeros.insert(10);
+        arbolNumeros.insert(5);
+        arbolNumeros.insert(3);
+        arbolNumeros.insert(8);
+        arbolNumeros.insert(20);
+        arbolNumeros.insert(15);
 
-               arbolNumeros.insert(10);
-               arbolNumeros.insert(5);
-               arbolNumeros.insert(3);
-               arbolNumeros.insert(8);
-               arbolNumeros.insert(20);
-               arbolNumeros.insert(15);
+        System.out.println("pre Order");
 
+        arbolNumeros.preOrder();
+        System.out.println("Pos Order");
+        arbolNumeros.posOrder();
+        System.out.println("In order");
+        arbolNumeros.inOrden();
+        System.out.println("niveles");
+        arbolNumeros.niveles();
+        System.out.println("altura");
+        arbolNumeros.altura();
+        System.out.println(arbolNumeros.altura());
+        System.out.println("peso");
 
-               System.out.println("pre Order");
+        arbolNumeros.peso();
+        System.out.println(arbolNumeros.peso());
 
-               arbolNumeros.preOrder();
-               System.out.println("Pos Order");
-               arbolNumeros.posOrder();
-               System.out.println("In order");
-               arbolNumeros.inOrden();
-               System.out.println("niveles");
-               arbolNumeros.niveles();
-               System.out.println("altura");
-               arbolNumeros.altura();
-               System.out.println(arbolNumeros.altura());
-               System.out.println("peso");
+    }
 
-               arbolNumeros.peso();
-               System.out.println(arbolNumeros.peso());
-       
-
-
-                
-
-            }
-        private static void runIntComparativaPesos() {
+    private static void runIntComparativaPesos() {
         IntTree tree = new IntTree();
         Random random = new Random();
 
@@ -148,13 +148,12 @@ public class App {
 
         System.out.println();
 
-        //System.out.println("Tiempo getPeso(): "
-               // + tiempoPesoVariableMs + " ms");
+        // System.out.println("Tiempo getPeso(): "
+        // + tiempoPesoVariableMs + " ms");
 
-        //System.out.println("Tiempo pesoRecursivo(): "
-                //+ tiempoPesoRecursivoMs + " ms");
-
+        // System.out.println("Tiempo pesoRecursivo(): "
+        // + tiempoPesoRecursivoMs + " ms");
 
     }
-    
+
 }
