@@ -15,7 +15,7 @@ empieza con el caso base de que si el la raiz es igual a un null va a retornar l
 ## Salida de consola 
 ![alt text](<assents/image copy 4.png>)
 
-## Segundo ejercicio
+## Ejercicio 2
 ## Insercion con Inversion de un arbol Binario
 ![alt text](image-6.png)
 ![alt text](image-7.png)
