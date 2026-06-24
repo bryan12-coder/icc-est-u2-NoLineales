@@ -15,10 +15,11 @@ empieza con el caso base de que si el la raiz es igual a un null va a retornar l
 ## Salida de consola 
 ![alt text](<assents/image copy 4.png>)
 
-## Ejercicio 2
+## Ejercicio 2.
 ## Insercion con Inversion de un arbol Binario
 ![alt text](image-6.png)
 ![alt text](image-7.png)
+
 
 ## Descripcion
 El metodo insert va insertando numero por numero de los valores que le dimos en el arbol, despues imprime el arreglo orginal y despues  creammos una varibale invertido el cual va a guardar al metodo va a llamar el metodo invert el cual por consiguiente tambien llame al metodo invert recuersivo va intercambiado a sus hijos y muestra el proceso invertido,
