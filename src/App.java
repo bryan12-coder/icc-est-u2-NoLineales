@@ -1,5 +1,8 @@
 import java.util.Random;
+import java.util.Set;
 
+import collections.sets.Sets;
+import models.Contacto;
 import models.Person;
 import structures.nodes.Node;
 import structurestrees.BynaryTree;
@@ -11,16 +14,62 @@ import structurestrees.IntTree;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        runIntTree();
-        runPersonTree();
-        runEjercicio1();
-        runEjercicio2();
-        runEjercicio3();
-        runEjercicio4();
+        //runIntTree();
+        //runPersonTree();
+        //unEjercicio1();
+        //runEjercicio2();
+        //runEjercicio3();
+        //runEjercicio4();
+        runSets();
 
-    }
+                
+        
+            }
+        
+            private static void runSets() {
+                Sets sets= new Sets();
 
-    private static void runEjercicio4() {
+                // Primera implementacion hashSet
+                System.out.println("HastSet");
+                Set<String> hashSet = sets.contruirHasSets();
+                System.out.println(hashSet);
+                System.out.println("Tamaño : " + hashSet.size());
+                System.out.println(hashSet.contains("F"));
+
+
+                //Segunda implementacion
+                Set<String> lhSet= sets.contruirLinkedHashSets();
+                System.out.println(lhSet);
+                System.out.println("Tamaño : " + lhSet.size());
+                System.out.println(lhSet.contains("D"));
+
+
+                //Tercera implementacion
+                System.out.println("Tree Set");
+                Set<String> tSet= sets.contruirTreeSets();
+                System.out.println(tSet);
+                System.out.println("Tamaño : " + tSet.size());
+                System.out.println(tSet.contains("D"));
+
+
+                //Tree set con contacto
+                //Tercera implementacion
+                System.out.println("Tree Set");
+                Set<Contacto> tCSet= sets.contruirTreeSetsComparador();
+                System.out.println(tCSet);
+                System.out.println("Tamaño : " + tCSet.size());
+
+                //Quinta compracacion
+                System.out.println("Has set Contacto");
+                Set<Contacto> hCSet= sets.construirHashSetContacto();
+                System.out.println(hCSet);
+                System.out.println("Tamaño : " + hCSet.size());
+                
+
+
+            }
+        
+            private static void runEjercicio4() {
 
         Ejercicio4 ejercicio4 = new Ejercicio4();
         int[] numeros = new int[] { 4, 2, 7, 1, 3, 8 };
