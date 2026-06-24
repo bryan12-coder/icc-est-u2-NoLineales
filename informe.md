@@ -7,7 +7,7 @@ Bryam Collaguazo
 ## Insercion de un Bta y impresion de la consola de manera vertical
 ![alt text](image-5.png)
 
-## Descripcion
+## Descripcion Insert
 El metodo insert permite llegar a crear un arbol nuevo y despues con los numeros que le dimos en el main va insertando uno por uno en las posiciones adecuadas para mostarlo en consola
 ## Descripcion del printTreeRecursivo
 El metodo de printTree generalmente es como la base de donde empieza el arbol es el quien sabe a donde mandar cada elemento generado, es el que va a llamar al metodo recursivo para ir ubicando los elementos y imprimiendolos, el metodo printRecursivo
