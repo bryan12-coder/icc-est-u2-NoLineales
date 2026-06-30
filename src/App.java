@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Set;
 
+import collections.maps.Maps;
 import collections.sets.Sets;
 import models.Contacto;
 import models.Person;
@@ -20,13 +21,24 @@ public class App {
         //runEjercicio2();
         //runEjercicio3();
         //runEjercicio4();
-        runSets();
-
+        //runSets();
+        runMaps();
+        
+                        
                 
+                    }
+                
+                private static void runMaps() {
+                    Maps maps= new Maps();
+                    maps.construirHashMap();
+                    System.out.println("--------");
+                    maps.contruirLinkedHashMap();
+                    System.out.println("----------");
+                    maps.cTreeMap();
+                
+                }
         
-            }
-        
-            private static void runSets() {
+                    private static void runSets() {
                 Sets sets= new Sets();
 
                 // Primera implementacion hashSet

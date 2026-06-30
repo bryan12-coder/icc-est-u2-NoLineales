@@ -70,3 +70,12 @@ En conclusion puedo decir que la recursividad es una herramienta  muy util ya qu
 - Conclusión 3: 
 En concluision el tipo de datos genericos implemtentados que se llegana combinar con la interfaz, este nos permite crear un codigo que sea reutilizable. Gracias a esto una misma estructura de arbol nos permite guardar mas objetos.
 
+## Explicacion sobre la nueva clase del 24/06/2026
+## Creamos un metodo llamada contruirHasSets
+El cual no permite como primer punto elementos duplicados y no llega a garantizar el orden de los elementos, en este se repetia una letra que era la A y como en este no se puede contener elementos duplicados el hasset ignora la repetira porque tecnincamente ya esta impresa, y imprime en cualquier orden.
+## Creamos un metodo llamado contruirLinkedHashSets
+En este caso es similar este no permite elementos duplicados pero si garantiza el orden de los elementos de pendiendo de su valor o si es por letras el valor del codigo ascci para poder ordenarlas y compararlas.
+## Creamos un metodo llamado contruirTreeSets
+En este primero no permite elementos duplicados y mntiene los elementos ordenados, pero si existen palabras o valores repetidas las ignora por completo y no las imprime solo imprime las primeras que salen ignorando por completo las otras.Tienen un orden programable
+
+
