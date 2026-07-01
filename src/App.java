@@ -5,6 +5,7 @@ import collections.maps.Maps;
 import collections.sets.Sets;
 import models.Contacto;
 import models.Person;
+import structures.graphs.Graph;
 import structures.nodes.Node;
 import structurestrees.BynaryTree;
 import structurestrees.Ejercicio1;
@@ -23,12 +24,35 @@ public class App {
         //runEjercicio4();
         //runSets();
         runMaps();
-        
+        runGraph();
+                
+                                
                         
+                            }
+                        
+        private static void runGraph() {
+            Graph<String> grafos= new Graph<>();
+            grafos.add("A");
+            grafos.add("B");
+            grafos.add("C");
+            grafos.add("D");
+            grafos.add("J");
+            grafos.addEdgeUni("A", "B");
+            grafos.addEdgeUni("B", "C");
+            grafos.addEdgeUni("C", "A");
+            grafos.addEdgeUni("B", "D");
+            grafos.addEdge("J", "D");
+            grafos.addEdge("D", "C");
+            grafos.printGrafo();
+
+
+
+
+
                 
-                    }
-                
-                private static void runMaps() {
+        }
+        
+                        private static void runMaps() {
                     Maps maps= new Maps();
                     maps.construirHashMap();
                     System.out.println("--------");

@@ -54,6 +54,29 @@ En este ejercicio llegamos a crear un arbol que es generico.Esto quiere decir qu
 | :--- | :---: | :---: | :--- |
 | Ejercicio 01: Arbol binario de busqueda|![alt text](image-3.png)| ![alt text](image-4.png) |El codigo llega a funcionar correctamente de forma que podemos medir su altura,ancgura y ver su pre orden e inorden, este funciona ordenando a la derecha los mayores y a la izquiera los menores |
 | Ejercicio 02: Arbol binario generico | ![alt text](image-1.png) | ![alt text](image-2.png) | Se llego a implementar de forma correcta una logica que seria generica el cual nos permitio ordenar por asi decirlo a las personas por su nombre y su edad con un metodo implementado.|
+## Explicacion sobre la nueva clase del 24/06/2026
+## Creamos un metodo llamada contruirHasSets
+El cual no permite como primer punto elementos duplicados y no llega a garantizar el orden de los elementos, en este se repetia una letra que era la A y como en este no se puede contener elementos duplicados el hasset ignora la repetira porque tecnincamente ya esta impresa, y imprime en cualquier orden.
+## Creamos un metodo llamado contruirLinkedHashSets
+En este caso es similar este no permite elementos duplicados pero si garantiza el orden de los elementos de pendiendo de su valor o si es por letras el valor del codigo ascci para poder ordenarlas y compararlas.
+## Creamos un metodo llamado contruirTreeSets
+En este primero no permite elementos duplicados y mntiene los elementos ordenados, pero si existen palabras o valores repetidas las ignora por completo y no las imprime solo imprime las primeras que salen ignorando por completo las otras.Tienen un orden programable
+
+## Explicacion clase De mapas 
+
+## Creamos un metodo llamado construirHashMap
+El cual se utilizó para guardar claves y valores, en donde no es necesario que tenga un orden especifico
+
+
+## Explicacion de la clase Graphos
+Fecha 01/07/2026
+
+En esta practica empezamos a programar con grafos en los cuales utilizamos Map y sets para poder hacer sus metodos agregar el cual recibio como parametros el T y la guardamos en una varible, despues instanciamos un nodo para ir agregando en dicho caso que no existan, con el putIfAbsent se iba comparando su era true o false de si existia el grafo y lo iba agredando en tal caso que no existiera, despues con el metodo addEdge este iba a generar las uniones entre los grafos en la cual instanciamos un nodo de tipo t en el cual que se iba a guardar en la varible nv1 y asi creamos otra con el nv2, haciamos una comparacion para ver si eran iguales pero ya no entre nodos si no entre los nodos del valor de las personas por lo que fuimos al metodo nodo y le hicimos retornar en su hatset el valor del nodo persona oara que asi vayamos agregando las conexiones, y tambien hicimos el metodo para unir una sola vez que es lo mismo que el de dos.
+
+
+
+## Salida de consola
+![alt text](<assents/image copy 14.png>)
 
 
 
@@ -70,12 +93,5 @@ En conclusion puedo decir que la recursividad es una herramienta  muy util ya qu
 - Conclusión 3: 
 En concluision el tipo de datos genericos implemtentados que se llegana combinar con la interfaz, este nos permite crear un codigo que sea reutilizable. Gracias a esto una misma estructura de arbol nos permite guardar mas objetos.
 
-## Explicacion sobre la nueva clase del 24/06/2026
-## Creamos un metodo llamada contruirHasSets
-El cual no permite como primer punto elementos duplicados y no llega a garantizar el orden de los elementos, en este se repetia una letra que era la A y como en este no se puede contener elementos duplicados el hasset ignora la repetira porque tecnincamente ya esta impresa, y imprime en cualquier orden.
-## Creamos un metodo llamado contruirLinkedHashSets
-En este caso es similar este no permite elementos duplicados pero si garantiza el orden de los elementos de pendiendo de su valor o si es por letras el valor del codigo ascci para poder ordenarlas y compararlas.
-## Creamos un metodo llamado contruirTreeSets
-En este primero no permite elementos duplicados y mntiene los elementos ordenados, pero si existen palabras o valores repetidas las ignora por completo y no las imprime solo imprime las primeras que salen ignorando por completo las otras.Tienen un orden programable
 
 

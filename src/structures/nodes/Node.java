@@ -1,10 +1,13 @@
 package structures.nodes;
 
+import java.util.Set;
+
 public class Node <T>{
 
     private T value;
     private Node<T> left;
     private Node<T> right;
+    
 
 
     public Node(T value) {
@@ -48,6 +51,31 @@ public class Node <T>{
     public String toString() {
         return "Node [Nodo = " + value +  "]";
     }
+
+
+    @Override
+    public int hashCode() {
+        return value.hashCode();
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Node other = (Node) obj;
+        if (value == null) {
+            if (other.value != null)
+                return false;
+        } else if (!value.equals(other.value))
+            return false;
+        return true;
+    }
+    
     
 
     
