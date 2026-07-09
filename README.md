@@ -62,10 +62,14 @@ En este caso es similar este no permite elementos duplicados pero si garantiza e
 ## Creamos un metodo llamado contruirTreeSets
 En este primero no permite elementos duplicados y mntiene los elementos ordenados, pero si existen palabras o valores repetidas las ignora por completo y no las imprime solo imprime las primeras que salen ignorando por completo las otras.Tienen un orden programable
 
-## Explicacion clase De mapas 
+## Explicacion clase De mapas 25/06/2026
 
 ## Creamos un metodo llamado construirHashMap
-El cual se utilizó para guardar claves y valores, en donde no es necesario que tenga un orden especifico
+El cual se utilizó para guardar claves y valores, en donde no es necesario que tenga un orden especifico, cuando se intenta insertar una clave ya existente simplemente la  actualiza y la va sobreescribiendi
+## Creacion de un contruirLinkedHashMap
+para este se llego a utuliza para guardar claves y valores pero el detalle de este es que va guardando el orden de como fuero llegando o entrando los datos para reflejarlo en la Salida
+## Creacion de cTreeMap
+Para este se ocupo un tree map el cual simplmente garantiza un orden alfebetico y no permite duplicados de tal manera que si existe un mismo valor simplemente lo ignora y lo lo deja entrar.
 
 
 ## Explicacion de la clase Graphos

@@ -6,6 +6,8 @@ import collections.sets.Sets;
 import models.Contacto;
 import models.Person;
 import structures.graphs.Graph;
+import structures.graphs.PathResult;
+import structures.graphs.implementatios.DFSPathFinder;
 import structures.nodes.Node;
 import structurestrees.BynaryTree;
 import structurestrees.Ejercicio1;
@@ -23,14 +25,36 @@ public class App {
         //runEjercicio3();
         //runEjercicio4();
         //runSets();
-        runMaps();
-        runGraph();
-                
+        //runMaps();
+        //runGraph();
+        runGraph2();
+                        
+                                        
                                 
-                        
-                            }
-                        
-        private static void runGraph() {
+                                    }
+                                
+                private static void runGraph2() {
+                Graph<String> g= new Graph<>();
+                g.addEdge("A", "B");
+                g.addEdge("A","C");
+                g.addEdge("B", "D");
+                g.addEdge("C", "J");
+                g.addEdgeUni("D", "E");
+                g.addEdge("E", "F");
+                g.addEdgeUni("K", "J");
+
+                DFSPathFinder<String> dfs= new DFSPathFinder<>();
+                PathResult<String> result= dfs.find(g, "A", "F");
+                PathResult<String> result1= dfs.find(g, "A", "J");
+                PathResult<String> result3= dfs.find(g, "A", "K");
+                System.out.println(result);
+                System.out.println(result1);
+                System.out.println(result3);
+                
+
+            }
+        
+                private static void runGraph() {
             Graph<String> grafos= new Graph<>();
             grafos.add("A");
             grafos.add("B");

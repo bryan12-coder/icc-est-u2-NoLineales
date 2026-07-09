@@ -47,6 +47,7 @@ public class Graph<T> {
         graph.get(nv1).add(nv2);
 
     }
+
     public void printGrafo(){
         for (Map.Entry<Node<T>, Set<Node<T>>> entry : graph.entrySet()) {
             System.out.print(entry.getKey()+ "->");
@@ -57,6 +58,9 @@ public class Graph<T> {
             System.out.println();
             
         }
+    }
+    public Set<Node<T>> getVecinos(T current) {
+        return graph.getOrDefault(new Node<T>(current), new HashSet<Node<T>>());
     }
 
    
