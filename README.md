@@ -47,6 +47,8 @@ En este ejercicio llegamos a crear un arbol que es generico.Esto quiere decir qu
 
 
 
+
+
 ### Tabla de evidencias requeridas
 
 
@@ -81,6 +83,57 @@ En esta practica empezamos a programar con grafos en los cuales utilizamos Map y
 
 ## Salida de consola
 ![alt text](<assents/image copy 14.png>)
+
+## Explicacion de la clase de 08/07/2026
+Lo que hicimos aqui fue crear un codigo el cual nos servia para que vaya visitando cada nodo hasta encontrar un camino hacia el que buscamos, y en tal caso de no encontrarlo devolvia que no se econtró el nodo, lo implementamos con interfaz la cual No contiene logica interna, Define los metodos, No se puede instanciar,  Estructura de metodo, el objetivo de mi sistema es encontrar una rutaDefine una accion, la accion define el resultado
+## Este es el codigo que desarrollamos
+public class DFSPathFinder<T> implements PathFinder<T> {
+
+    @Override
+    public PathResult<T> find(Graph<T> graph, T start, T end) {
+        Set<T> visited = new LinkedHashSet<>();
+        Set<T> path= new LinkedHashSet<>();
+
+        boolean encontrado= dfs(graph,start,end,visited,path);
+        
+                if(!encontrado){
+                    path.clear();
+                }
+                return new PathResult<>(visited, path);//Visitados y la ruta
+        
+            }
+        
+            private boolean dfs(Graph<T> graph, T current, T end, Set<T> visited, Set<T> path) {
+                visited.add(current);
+                path.add(current);
+
+                //Caso base
+                Node<T> nC= new Node<T>(current);
+                Node<T> nE= new Node<T>(end);
+                if(nC.equals(nE)){
+                    return true;
+
+                }
+                for(Node<T> vecino: graph.getVecinos(current)){
+                    if(!visited.contains(vecino.getValue())){
+                        boolean encon=dfs(graph,vecino.getValue(),end,visited,path);
+                        if(encon){
+                            return true;
+
+                        }
+                    }
+                }
+                path.remove(current);
+
+                return false;
+            }
+
+
+El algortimo implementado fue DFS, creamos dos linkedHasset uno que se llama visited para llevar un registro de todos los nodos visitados, y un path para ir registrando el camino de los nodos,despues llama al metodo bfs y va diciendo que si ya finalizó la busqueda y no encontró nada limpie el camino de los nodos y retorna el resultado y las rutas,
+Despues añade a los metodos current a los conjuntos path y visited, despues en el caso base dice si el nodo inicial es igual al nodo final y retorna un true asi indica que un camino hacia el nodo buscado si existe.
+despues recorre todos los vecinos del nodo actual, despues si un vecino nno llega a ser recorrido llega a reaizar una llmada recursiva con el dfs. en tal caso que el dfs llega a dar true significa que el camino ha sido encontrado y regresa.
+Despues utulizamos un backTraquing el cual nos ayuda a que si el nodo no fue encontrado elimina la ruta del nodo actual ya que ese camino no fue el indicado.
+
 
 
 
