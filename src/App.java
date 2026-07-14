@@ -7,6 +7,7 @@ import models.Contacto;
 import models.Person;
 import structures.graphs.Graph;
 import structures.graphs.PathResult;
+import structures.graphs.implementatios.BFSPathFinder;
 import structures.graphs.implementatios.DFSPathFinder;
 import structures.nodes.Node;
 import structurestrees.BynaryTree;
@@ -28,6 +29,7 @@ public class App {
         //runMaps();
         //runGraph();
         runGraph2();
+        
                         
                                         
                                 
@@ -43,7 +45,7 @@ public class App {
                 g.addEdge("E", "F");
                 g.addEdgeUni("K", "J");
 
-                DFSPathFinder<String> dfs= new DFSPathFinder<>();
+                BFSPathFinder<String> dfs= new BFSPathFinder<>();
                 PathResult<String> result= dfs.find(g, "A", "F");
                 PathResult<String> result1= dfs.find(g, "A", "J");
                 PathResult<String> result3= dfs.find(g, "A", "K");
