@@ -87,6 +87,8 @@ En esta practica empezamos a programar con grafos en los cuales utilizamos Map y
 ## Explicacion de la clase de 08/07/2026
 Lo que hicimos aqui fue crear un codigo el cual nos servia para que vaya visitando cada nodo hasta encontrar un camino hacia el que buscamos, y en tal caso de no encontrarlo devolvia que no se econtró el nodo, lo implementamos con interfaz la cual No contiene logica interna, Define los metodos, No se puede instanciar,  Estructura de metodo, el objetivo de mi sistema es encontrar una rutaDefine una accion, la accion define el resultado
 ## Este es el codigo que desarrollamos
+```java
+
 public class DFSPathFinder<T> implements PathFinder<T> {
 
     @Override
@@ -127,12 +129,71 @@ public class DFSPathFinder<T> implements PathFinder<T> {
 
                 return false;
             }
+```
 
 
 El algortimo implementado fue DFS, creamos dos linkedHasset uno que se llama visited para llevar un registro de todos los nodos visitados, y un path para ir registrando el camino de los nodos,despues llama al metodo bfs y va diciendo que si ya finalizó la busqueda y no encontró nada limpie el camino de los nodos y retorna el resultado y las rutas,
 Despues añade a los metodos current a los conjuntos path y visited, despues en el caso base dice si el nodo inicial es igual al nodo final y retorna un true asi indica que un camino hacia el nodo buscado si existe.
 despues recorre todos los vecinos del nodo actual, despues si un vecino nno llega a ser recorrido llega a reaizar una llmada recursiva con el dfs. en tal caso que el dfs llega a dar true significa que el camino ha sido encontrado y regresa.
 Despues utulizamos un backTraquing el cual nos ayuda a que si el nodo no fue encontrado elimina la ruta del nodo actual ya que ese camino no fue el indicado.
+## Clase del 13/07/2026
+En esta clase lo que hicimos fue crear un algoritmo BFS para hacer encontrar el algotirmo mas para llegr a un nodo que busquemos 
+```java
+public class BFSPathFinder<T> implements PathFinder<T> {
+    @Override
+    public PathResult<T> find(Graph<T> graph, T start, T end){
+        Queue<T> queue = new LinkedList<>();
+        Set<T> visitados = new LinkedHashSet<>();
+        Map<Node<T> , Node<T>> parent = new LinkedHashMap<>();
+        Set<T> viseted = new LinkedHashSet<>();
+
+        queue.add(start);
+        visitados.add(start);
+        parent.put(new Node<>(start), null);
+        while (!queue.isEmpty()) {
+            T current = queue.poll();
+            viseted.add(current);
+            if(current.equals(end)){
+                return new PathResult<>(viseted, buildPath(parent, end));
+            }  
+            for(Node<T> vecino: graph.getVecinos(current)){
+                if(!visitados.contains(vecino.getValue())){
+                    visitados.add(vecino.getValue());
+                    parent.put(vecino, new Node<T>(current));
+                    queue.add(vecino.getValue());
+                }
+            }
+        }
+        return new PathResult<>(viseted, new HashSet<>() );
+
+    }
+
+    private Set<T>  buildPath(Map<Node<T>, Node<T>> parent, T end) {
+        Set<T> path= new LinkedHashSet<>();
+        Node<T> nEnd= new Node<>(end);
+        List<T> temp= new ArrayList<>();
+        for(Node<T> at= nEnd; at !=null; at=parent.get(at)){// crea una unstancia de nodo at
+            path.add(at.getValue());
+        }
+        while(path.isEmpty()){
+            
+
+        }
+
+
+        return path;
+
+        
+    }
+}
+```
+Lo que hace este codigo es crear tres variables una cola un set y un mapa y set para ir llevando un registro de los visitados, lo que hace es que ingresa el valor inicial a la cola, le añade tambien a los visitados tambiuen en la variable padre guarda el primer nodo con un null,
+ingresa al while y dice mientras existan nodos exitan nodos que esten pendientes debe seguir buiscando, despues saca el primer nodo
+de la cola  para irlo comparando, ve al caso base y pregunta el nodo que sacamos es igual al que buscamos
+como no no entra al caso base y va al for  y recorre todos los nodos vecino de ese nodo despues entra al if y va viendo que todavia el vecino no sea visitado
+despues llega y guarda el nodo vecino para despues reconstruirlo. despues creamos un metodo para que reconstruya el camino recorrido
+despues empieza desde el nodo a buscar y va retrociendo y va agragando al conjunto.  
+
 
 
 
